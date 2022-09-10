@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +76,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="V8U-T2-JZr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -90,15 +93,20 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BEd-yL-une" secondAttribute="trailing" constant="20" id="vR8-q2-3uF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="partnerNameTF" destination="v8Q-Jr-UDn" id="wgU-Lw-3N5"/>
+                        <outlet property="yourNameTF" destination="v3p-a9-vXX" id="dBD-AM-4se"/>
+                        <segue destination="nTL-mZ-lsj" kind="show" identifier="goToResult" id="dCs-Q5-x38"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Result View Controller-->
         <scene sceneID="mE3-10-gcQ">
             <objects>
-                <viewController id="nTL-mZ-lsj" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="nTL-mZ-lsj" customClass="ResultViewController" customModule="NamesCompApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ddv-6k-Qqh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,6 +170,12 @@
                             <constraint firstItem="fk7-bf-YYT" firstAttribute="top" secondItem="Q30-Z2-qFY" secondAttribute="bottom" constant="40" id="uFm-HC-Bvn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="76f-49-yLv"/>
+                    <connections>
+                        <outlet property="namesLabel" destination="ZTP-52-IYc" id="W1f-V2-jlZ"/>
+                        <outlet property="progressView" destination="eDr-Ew-Roy" id="GgR-Ex-KTe"/>
+                        <outlet property="resultLabel" destination="Q30-Z2-qFY" id="TZN-bn-qSs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKr-Ff-38J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
