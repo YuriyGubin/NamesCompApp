@@ -48,12 +48,18 @@
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3p-a9-vXX">
                                                 <rect key="frame" x="0.0" y="0.0" width="177" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="syy-nU-Rlf"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v8Q-Jr-UDn">
                                                 <rect key="frame" x="0.0" y="64" width="177" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="q2m-5W-cBM"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -145,7 +151,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Show Result">
+                                <state key="normal" title="Go Back">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -153,6 +159,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backButtonTapped" destination="nTL-mZ-lsj" eventType="touchUpInside" id="9ls-rs-gDv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efr-mX-3o7"/>
@@ -175,9 +184,11 @@
                         <outlet property="namesLabel" destination="ZTP-52-IYc" id="W1f-V2-jlZ"/>
                         <outlet property="progressView" destination="eDr-Ew-Roy" id="GgR-Ex-KTe"/>
                         <outlet property="resultLabel" destination="Q30-Z2-qFY" id="TZN-bn-qSs"/>
+                        <segue destination="S3j-f6-s61" kind="unwind" identifier="unwindSegue" unwindAction="unwindSegueToFirstVCWithSegue:" id="wF3-Y6-LUR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yKr-Ff-38J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="S3j-f6-s61" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="729" y="70"/>
         </scene>

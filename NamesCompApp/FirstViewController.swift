@@ -27,5 +27,26 @@ class FirstViewController: UIViewController {
         performSegue(withIdentifier: "goToResult", sender: nil)
     }
     
+    @IBAction func unwindSegueToFirstVC(segue: UIStoryboardSegue) {
+        guard segue.identifier == "unwindSegue" else { return }
+        yourNameTF.text = ""
+        partnerNameTF.text = ""
+    }
+    
 }
 
+extension FirstViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == yourNameTF {
+            partnerNameTF.becomeFirstResponder()
+        } else {
+            resultButtonTapped()
+        }
+        return true
+    }
+}
