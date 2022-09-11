@@ -33,15 +33,19 @@ class FirstViewController: UIViewController {
                              "&", "*", "(", ")", "_","-", "+", "=",
                              ",", ".", ":", "'","\"", "§", "±", " "]
         
-        for symbol in firstName {
-            if deniedSymbols.contains(String(symbol)) {
-                showAlert(
-                    title: "Your name contains incorrect symbols",
-                    message: "Please enter correct name only from letters"
-                )
-                return
-            }
+        let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i",
+                        "j", "k", "l", "m", "n", "o", "p", "q", "r",
+                        "s", "t", "u", "v", "w", "x", "y", "z"]
+        
+        let filteredSymbols = firstName.lowercased().filter { alphabet.contains(String($0)) }
+        if filteredSymbols.count != firstName.count {
+            showAlert(
+                title: "Your name contains incorrect symbols",
+                message: "Please enter correct name only from letters"
+            )
+            return
         }
+        
         
         for symbol in secondName {
             if deniedSymbols.contains(String(symbol)) {
