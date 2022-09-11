@@ -28,11 +28,10 @@ class FirstViewController: UIViewController {
             return
         }
         
-        let deniedSymbols = ["1", "2", "3", "4", "5", "6", "7",
-                             "8", "9", "0", "!", "@", "#", "$",
-                             "%", "^", "&", "*", "(", ")", "_",
-                             "-", "+", "=", ",", ".", ":", "'",
-                             "\"", "§", "±", " "]
+        let deniedSymbols = ["1", "2", "3", "4", "5", "6", "7", "8",
+                             "9", "0", "!", "@", "#", "$","%", "^",
+                             "&", "*", "(", ")", "_","-", "+", "=",
+                             ",", ".", ":", "'","\"", "§", "±", " "]
         
         for symbol in firstName {
             if deniedSymbols.contains(String(symbol)) {
