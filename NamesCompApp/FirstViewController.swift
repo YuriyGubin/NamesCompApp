@@ -23,10 +23,37 @@ class FirstViewController: UIViewController {
         if firstName.isEmpty || secondName.isEmpty {
             showAlert(
                 title: "Names are missing",
-                message: "Please enter both names "
+                message: "Please enter both names"
             )
             return
         }
+        
+        let deniedSymbols = ["1", "2", "3", "4", "5", "6", "7",
+                             "8", "9", "0", "!", "@", "#", "$",
+                             "%", "^", "&", "*", "(", ")", "_",
+                             "-", "+", "=", ",", ".", ":", "'",
+                             "\"", "§", "±", " "]
+        
+        for symbol in firstName {
+            if deniedSymbols.contains(String(symbol)) {
+                showAlert(
+                    title: "Your name contains incorrect symbols",
+                    message: "Please enter correct name only from letters"
+                )
+                return
+            }
+        }
+        
+        for symbol in secondName {
+            if deniedSymbols.contains(String(symbol)) {
+                showAlert(
+                    title: "Partner's name contains incorrect symbols",
+                    message: "Please enter correct name only from letters"
+                )
+                return
+            }
+        }
+        
         performSegue(withIdentifier: "goToResult", sender: nil)
     }
     
