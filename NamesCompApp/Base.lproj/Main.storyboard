@@ -67,7 +67,7 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6B-Js-t1L">
                                 <rect key="frame" x="137" y="360" width="140" height="50"/>
-                                <color key="backgroundColor" red="0.88937686188052401" green="0.63767682519813385" blue="0.85374995954039901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="SKh-KQ-pzN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="nii-mb-9TR"/>
@@ -88,7 +88,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="1" green="0.96711710289120723" blue="0.98817175506013566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.85807345550180192" green="0.9712051299280644" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="L6B-Js-t1L" firstAttribute="top" secondItem="BEd-yL-une" secondAttribute="bottom" constant="40" id="0LG-Au-7xd"/>
                             <constraint firstItem="URB-v5-pEV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QQy-8l-KzS"/>
@@ -144,7 +144,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk7-bf-YYT">
                                 <rect key="frame" x="137" y="364" width="140" height="50"/>
-                                <color key="backgroundColor" red="0.88937686189999998" green="0.63767682520000002" blue="0.85374995949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="BPP-J9-Xyx"/>
                                     <constraint firstAttribute="height" constant="50" id="E97-2q-Dj3"/>
@@ -165,7 +165,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="efr-mX-3o7"/>
-                        <color key="backgroundColor" red="1" green="0.96711710289999997" blue="0.98817175509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.85807345550000003" green="0.97120512989999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fPP-VK-gDr" firstAttribute="centerX" secondItem="ddv-6k-Qqh" secondAttribute="centerX" id="8ix-KL-Say"/>
                             <constraint firstItem="fPP-VK-gDr" firstAttribute="top" secondItem="efr-mX-3o7" secondAttribute="top" constant="100" id="Av7-as-BB8"/>
